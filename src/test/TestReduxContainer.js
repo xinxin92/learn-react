@@ -10,17 +10,19 @@ const ContainerCounter = connect(
 // Map Redux state to component props
 function mapStateToProps(state) {
     return {
-        value: state.count
+        value: state.TestRedux.count
     }
 };
 
 // Action
-const increaseAction = { type: 'increase' };
+const onIncrementAction = { type: 'increase' };
+const onDecrementAction = { type: 'decrease' };
 
 // Map Redux actions to component props
 function mapDispatchToProps(dispatch) {
     return {
-        onIncreaseClick: () => dispatch(increaseAction)
+        onIncrement: () => dispatch(onIncrementAction),
+        onDecrement: () => dispatch(onDecrementAction)
     }
 };
 

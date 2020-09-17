@@ -1,17 +1,10 @@
-import {createStore} from "redux";
+import {combineReducers, createStore} from "redux";
+import TestRedux from './reducers/TestRedux';
 
-// Store
-const Store = createStore(counter);
+const reducer = combineReducers({
+    TestRedux,
+});
 
-// Reducer
-function counter(state = { count: 0 }, action) {
-    const count = state.count
-    switch (action.type) {
-        case 'increase':
-            return { count: count + 1 }
-        default:
-            return state
-    }
-};
+const Store = createStore(reducer);
 
 export default Store;

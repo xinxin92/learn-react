@@ -4,11 +4,12 @@ import PropTypes from 'prop-types'
 //redux-UI组件
 class TestReduxUI extends Component {
     render() {
-        const { value, onIncreaseClick } = this.props
+        const { value, onIncrement, onDecrement } = this.props
         return (
             <div>
-                <span>{value}</span>
-                <button onClick={onIncreaseClick}>Increase</button>
+                <h1>{value}</h1>
+                <button onClick={onIncrement}>+</button>
+                <button onClick={onDecrement}>-</button>
             </div>
         )
     }
@@ -16,7 +17,8 @@ class TestReduxUI extends Component {
 
 TestReduxUI.propTypes = {
     value: PropTypes.number.isRequired,
-    onIncreaseClick: PropTypes.func.isRequired
+    onIncrement: PropTypes.func.isRequired,
+    onDecrement: PropTypes.func.isRequired
 }
 
 export default TestReduxUI;
