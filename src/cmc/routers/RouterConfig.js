@@ -24,13 +24,13 @@ export const adminRoutes = [
         component: Index,
     },{
         isShow: true,
-        title: '列表',
+        title: '内容列表',
         icon: 'iconliebiao1',
         path: '/admin/model1/list',
         component: List,
     },{
         isShow: false,
-        path: '/admin/model1/edit/:id',
+        path: '/admin/model1/edit/:id?',
         component: Edit,
     },
 ];
